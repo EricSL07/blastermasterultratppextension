@@ -1,0 +1,37 @@
+{
+  "name": "blastermasterultratppextension",
+  "displayName": "BlasterMasterUltraTPPextension",
+  "description": "Syntax highlighting for TPP lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.134.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "TPPextension",
+        "aliases": [
+          "TPPextension",
+          "TPPextension"
+        ],
+        "extensions": [
+          "TPP"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "TPPextension",
+        "scopeName": "source.TPP",
+        "path": "./syntaxes/TPPextension.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^5.4.1"
+  }
+}
