@@ -1,32 +1,106 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "TPPextension",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.TPPextension",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.TPPextension",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.TPPextension",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.TPP"
+  "name": "TPPextension",
+  "scopeName": "source.tpp",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.TPPextension",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.TPPextension",
+          "begin": "\\{",
+          "end": "\\}"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.TPPextension",
+          "match": "\\b(se|então|senão|fim|repita|até|retorna)\\b"
+        },
+        {
+          "name": "keyword.type.TPPextension",
+          "match": "\\b(inteiro)\\b"
+        },
+        {
+          "name": "support.function.TPPextension",
+          "match": "\\b(leia|escreva|principal)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.TPPextension",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.TPPextension",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.TPPextension",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.TPPextension",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.TPPextension",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.TPPextension",
+          "match": ":="
+        },
+        {
+          "name": "keyword.operator.comparison.TPPextension",
+          "match": "<=|>=|<>|<|>|="
+        },
+        {
+          "name": "keyword.operator.arithmetic.TPPextension",
+          "match": "\\+|-|\\*|/"
+        },
+        {
+          "name": "keyword.operator.logical.TPPextension",
+          "match": "\\b(e|ou|não)\\b"
+        }
+      ]
+    }
+  }
 }

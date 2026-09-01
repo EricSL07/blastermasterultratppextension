@@ -2,7 +2,13 @@
   "name": "blastermasterultratppextension",
   "displayName": "BlasterMasterUltraTPPextension",
   "description": "Syntax highlighting for TPP lang",
+  "publisher": "e1a17373-6936-66f5-9ccc-76df44190c9d",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EricSL07/blastermasterultratppextension.git"
+  },
   "version": "0.0.1",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.134.0"
   },
@@ -10,6 +16,13 @@
     "Programming Languages"
   ],
   "contributes": {
+    "iconThemes": [
+      {
+        "id": "tpp-icon",
+        "label": "blastermasterultra icon",
+        "path": "./icons/icon-theme.json"
+      }
+    ],
     "languages": [
       {
         "id": "TPPextension",
@@ -18,7 +31,7 @@
           "TPPextension"
         ],
         "extensions": [
-          "TPP"
+          ".tpp"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -26,10 +39,13 @@
     "grammars": [
       {
         "language": "TPPextension",
-        "scopeName": "source.TPP",
+        "scopeName": "source.tpp",
         "path": "./syntaxes/TPPextension.tmLanguage.json"
       }
     ]
+  },
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'),yaml=require('js-yaml');fs.writeFileSync('./syntaxes/TPPextension.tmLanguage.json',JSON.stringify(yaml.load(fs.readFileSync('./syntaxes/TPPextension.tmLanguage.yaml','utf8')),null,2))\""
   },
   "devDependencies": {
     "js-yaml": "^5.4.1"

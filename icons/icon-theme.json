@@ -1,0 +1,13 @@
+{
+    "iconDefinitions": {
+        "_tpp": {
+            "iconPath": "./icon.png"
+        }
+    },
+    "fileExtensions": {
+        "tpp": "_tpp"
+    },
+    "languageIds": {
+        "TPPextension": "_tpp"
+    }
+}
