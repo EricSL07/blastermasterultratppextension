@@ -2,7 +2,7 @@
   "name": "blastermasterultratppextension",
   "displayName": "BlasterMasterUltraTPPextension",
   "description": "Syntax highlighting for TPP lang",
-  "publisher": "e1a17373-6936-66f5-9ccc-76df44190c9d",
+  "publisher": "<your publisher name>",
   "repository": {
     "type": "git",
     "url": "https://github.com/EricSL07/blastermasterultratppextension.git"
