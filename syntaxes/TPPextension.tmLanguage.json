@@ -56,32 +56,6 @@
         }
       ]
     },
-    "strings": {
-      "patterns": [
-        {
-          "name": "string.quoted.double.TPPextension",
-          "begin": "\"",
-          "end": "\"",
-          "patterns": [
-            {
-              "name": "constant.character.escape.TPPextension",
-              "match": "\\\\."
-            }
-          ]
-        },
-        {
-          "name": "string.quoted.single.TPPextension",
-          "begin": "'",
-          "end": "'",
-          "patterns": [
-            {
-              "name": "constant.character.escape.TPPextension",
-              "match": "\\\\."
-            }
-          ]
-        }
-      ]
-    },
     "operators": {
       "patterns": [
         {
@@ -98,7 +72,7 @@
         },
         {
           "name": "keyword.operator.logical.TPPextension",
-          "match": "\\b(e|ou|não)\\b"
+          "match": "\\b(&&|\\|\\|)\\b"
         }
       ]
     }

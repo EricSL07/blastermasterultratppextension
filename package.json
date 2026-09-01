@@ -45,9 +45,12 @@
     ]
   },
   "scripts": {
+    "test": "vscode-test",
     "build": "node -e \"const fs=require('fs'),yaml=require('js-yaml');fs.writeFileSync('./syntaxes/TPPextension.tmLanguage.json',JSON.stringify(yaml.load(fs.readFileSync('./syntaxes/TPPextension.tmLanguage.yaml','utf8')),null,2))\""
   },
   "devDependencies": {
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
     "js-yaml": "^5.4.1"
   }
 }
